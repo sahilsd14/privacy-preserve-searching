@@ -1,0 +1,10 @@
+.card {
+    background: rgba(30, 41, 59, 0.7);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+
+button {
+    background: #22c55e;
+}

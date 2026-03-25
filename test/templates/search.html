@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='search.css') }}">
+</head>
+
+<body>
+<div class="container">
+
+<h2>🔎 Search Files</h2>
+
+<form method="POST">
+<input type="text" name="keyword" placeholder="Enter keyword" required>
+
+<button type="submit">Search</button>
+</form>
+
+<a href="/dashboard">
+<button>🏠 Back to Dashboard</button>
+</a>
+
+</div>
+</body>
+</html>

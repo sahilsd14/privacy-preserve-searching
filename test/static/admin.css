@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background: rgba(30, 41, 59, 0.8);
+}
+
+th, td {
+    border: 1px solid #334155;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #334155;
+    color: #38bdf8;
+}
+
+tr:hover {
+    background: #475569;
+}
+
+/* 🔐 HASH BOX */
+.hash-box {
+    max-height: 150px;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.hash {
+    font-size: 11px;
+    color: #facc15;
+    word-break: break-all;
+    margin-bottom: 5px;
+}

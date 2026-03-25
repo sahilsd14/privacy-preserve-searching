@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='upload.css') }}">
+</head>
+
+<body>
+<div class="container">
+<h2>📤 Upload File</h2>
+
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="file" required>
+<button type="submit">Upload</button>
+</form>
+
+<a href="/dashboard"><button>🏠 Home</button></a>
+</div>
+</body>
+</html>

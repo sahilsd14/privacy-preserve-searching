@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Results</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+</head>
+
+<body>
+<div class="container">
+
+<h2>Results</h2>
+
+{% for doc in docs %}
+<div class="card">
+<h3>{{ doc.filename }}</h3>
+<p>Matches: {{ doc.count }}</p>
+
+<a href="/download/{{ doc.id }}">
+<button>Download</button>
+</a>
+</div>
+{% endfor %}
+
+<a href="/dashboard"><button>Home</button></a>
+
+</div>
+</body>
+</html>

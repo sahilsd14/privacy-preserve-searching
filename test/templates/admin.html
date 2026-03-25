@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+
+<!-- 🔄 AUTO REFRESH -->
+<meta http-equiv="refresh" content="5">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🔐 Backend Database Monitor</h1>
+
+<!-- USERS -->
+<h2>👤 Users</h2>
+<table>
+<tr><th>ID</th><th>Username</th></tr>
+{% for u in users %}
+<tr>
+<td>{{ u[0] }}</td>
+<td>{{ u[1] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<!-- DOCUMENTS -->
+<h2>📄 Documents</h2>
+<table>
+<tr>
+<th>ID</th>
+<th>Filename</th>
+<th>Size</th>
+<th>Upload Time</th>
+</tr>
+
+{% for d in documents %}
+<tr>
+<td>{{ d[0] }}</td>
+<td>{{ d[1] }}</td>
+<td>{{ d[2] }}</td>
+<td>{{ d[3] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<!-- HASH TABLE -->
+<h2>🔐 Keyword Hash Table</h2>
+
+{% for k in keywords %}
+<div class="card">
+    <h3>📄 Document ID: {{ k[0] }}</h3>
+
+    <div class="hash-box">
+        {% for h in k[1].split(',') %}
+            <p class="hash">{{ h }}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+.card {
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    background: rgba(30, 41, 59, 0.7);
+    text-align: center;
+}
+
+.upload { background: #22c55e; }
+.search { background: #3b82f6; }
+.admin { background: #f59e0b; }
+.logout { background: #ef4444; }

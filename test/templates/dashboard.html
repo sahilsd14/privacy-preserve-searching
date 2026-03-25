@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+
+<body>
+<div class="container">
+
+<h1>🔐 Secure Dashboard</h1>
+
+<!-- 👤 NORMAL USER -->
+{% if not is_admin %}
+
+<div class="card">
+<a href="/upload"><button class="upload">📤 Upload File</button></a>
+</div>
+
+<div class="card">
+<a href="/search"><button class="search">🔎 Search Files</button></a>
+</div>
+
+{% endif %}
+
+<!-- 🔐 ADMIN ONLY -->
+{% if is_admin %}
+<div class="card">
+<a href="/admin"><button class="admin">🔐 View Backend</button></a>
+</div>
+{% endif %}
+
+<!-- COMMON -->
+<div class="card">
+<a href="/logout"><button class="logout">🚪 Logout</button></a>
+</div>
+
+</div>
+</body>
+</html>
